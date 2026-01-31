@@ -56,14 +56,32 @@ The [arithmetic mean][arithmetic-mean] is defined as
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-strided-meanors
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import meanors from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-meanors@deno/mod.js';
+var meanors = require( '@stdlib/stats-strided-meanors' );
 ```
 
 #### meanors( N, x, strideX )
@@ -97,7 +115,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x0 = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -141,7 +159,7 @@ var v = meanors.ndarray( 4, x, 2, 1 );
 -   If `N <= 0`, both functions return `NaN`.
 -   Ordinary recursive summation (i.e., a "simple" sum) is performant, but can incur significant numerical error. If performance is paramount and error tolerated, using ordinary recursive summation to compute an arithmetic mean is acceptable; in all other cases, exercise due caution.
 -   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-base/accessor`][@stdlib/array/base/accessor]).
--   Depending on the environment, the typed versions ([`dmeanors`][@stdlib/stats/strided/dmeanors], [`smeanors`][@stdlib/stats/base/smeanors], etc.) are likely to be significantly more performant.
+-   Depending on the environment, the typed versions ([`dmeanors`][@stdlib/stats/strided/dmeanors], [`smeanors`][@stdlib/stats/strided/smeanors], etc.) are likely to be significantly more performant.
 
 </section>
 
@@ -154,8 +172,8 @@ var v = meanors.ndarray( 4, x, 2, 1 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import meanors from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-strided-meanors@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var meanors = require( '@stdlib/stats-strided-meanors' );
 
 var x = discreteUniform( 10, -50, 50, {
     'dtype': 'float64'
@@ -187,7 +205,7 @@ console.log( v );
 -   <span class="package-name">[`@stdlib/stats-strided/dmeanors`][@stdlib/stats/strided/dmeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a double-precision floating-point strided array using ordinary recursive summation.</span>
 -   <span class="package-name">[`@stdlib/stats-strided/mean`][@stdlib/stats/strided/mean]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-strided/nanmeanors`][@stdlib/stats/strided/nanmeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a strided array, ignoring NaN values and using ordinary recursive summation.</span>
--   <span class="package-name">[`@stdlib/stats-base/smeanors`][@stdlib/stats/base/smeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a single-precision floating-point strided array using ordinary recursive summation.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/smeanors`][@stdlib/stats/strided/smeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a single-precision floating-point strided array using ordinary recursive summation.</span>
 
 </section>
 
@@ -202,7 +220,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -219,7 +237,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -232,8 +250,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-strided-meanors.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-strided-meanors
 
-[test-image]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-strided-meanors/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-strided-meanors?branch=main
@@ -245,8 +263,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -271,17 +289,17 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/deno
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
 
 <!-- <related-links> -->
 
-[@stdlib/stats/strided/dmeanors]: https://github.com/stdlib-js/stats-strided-dmeanors/tree/deno
+[@stdlib/stats/strided/dmeanors]: https://github.com/stdlib-js/stats-strided-dmeanors
 
-[@stdlib/stats/strided/mean]: https://github.com/stdlib-js/stats-strided-mean/tree/deno
+[@stdlib/stats/strided/mean]: https://github.com/stdlib-js/stats-strided-mean
 
-[@stdlib/stats/strided/nanmeanors]: https://github.com/stdlib-js/stats-strided-nanmeanors/tree/deno
+[@stdlib/stats/strided/nanmeanors]: https://github.com/stdlib-js/stats-strided-nanmeanors
 
-[@stdlib/stats/base/smeanors]: https://github.com/stdlib-js/stats-base-smeanors/tree/deno
+[@stdlib/stats/strided/smeanors]: https://github.com/stdlib-js/stats-strided-smeanors
 
 <!-- </related-links> -->
 
