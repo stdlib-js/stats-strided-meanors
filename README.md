@@ -159,7 +159,7 @@ var v = meanors.ndarray( 4, x, 2, 1 );
 -   If `N <= 0`, both functions return `NaN`.
 -   Ordinary recursive summation (i.e., a "simple" sum) is performant, but can incur significant numerical error. If performance is paramount and error tolerated, using ordinary recursive summation to compute an arithmetic mean is acceptable; in all other cases, exercise due caution.
 -   Both functions support array-like objects having getter and setter accessors for array element access (e.g., [`@stdlib/array-base/accessor`][@stdlib/array/base/accessor]).
--   Depending on the environment, the typed versions ([`dmeanors`][@stdlib/stats/strided/dmeanors], [`smeanors`][@stdlib/stats/base/smeanors], etc.) are likely to be significantly more performant.
+-   Depending on the environment, the typed versions ([`dmeanors`][@stdlib/stats/strided/dmeanors], [`smeanors`][@stdlib/stats/strided/smeanors], etc.) are likely to be significantly more performant.
 
 </section>
 
@@ -205,7 +205,7 @@ console.log( v );
 -   <span class="package-name">[`@stdlib/stats-strided/dmeanors`][@stdlib/stats/strided/dmeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a double-precision floating-point strided array using ordinary recursive summation.</span>
 -   <span class="package-name">[`@stdlib/stats-strided/mean`][@stdlib/stats/strided/mean]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a strided array.</span>
 -   <span class="package-name">[`@stdlib/stats-strided/nanmeanors`][@stdlib/stats/strided/nanmeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a strided array, ignoring NaN values and using ordinary recursive summation.</span>
--   <span class="package-name">[`@stdlib/stats-base/smeanors`][@stdlib/stats/base/smeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a single-precision floating-point strided array using ordinary recursive summation.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/smeanors`][@stdlib/stats/strided/smeanors]</span><span class="delimiter">: </span><span class="description">calculate the arithmetic mean of a single-precision floating-point strided array using ordinary recursive summation.</span>
 
 </section>
 
@@ -237,7 +237,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -250,8 +250,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-strided-meanors.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-strided-meanors
 
-[test-image]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/stats-strided-meanors/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-strided-meanors/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-strided-meanors?branch=main
@@ -263,8 +263,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -299,7 +299,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/stats/strided/nanmeanors]: https://github.com/stdlib-js/stats-strided-nanmeanors
 
-[@stdlib/stats/base/smeanors]: https://github.com/stdlib-js/stats-base-smeanors
+[@stdlib/stats/strided/smeanors]: https://github.com/stdlib-js/stats-strided-smeanors
 
 <!-- </related-links> -->
 
